@@ -1,0 +1,1454 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>51黑爆料入口_黑料曝光视频社区_热点爆料官方平台</title>
+<meta name="description" content="51黑爆料入口是聚焦热点爆料与真实记录的原创视频平台，提供高清爆料视频、创作者社区与品质内容，打造值得信赖的企业级内容生态。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230c0d10'/%3E%3Cpath d='M20 16h24v10H20zM20 30h24v6H20zM20 40h16v8H20z' fill='%23ff3b30'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bh-bg:#0c0d10;
+  --bh-panel:#15171c;
+  --bh-panel-2:#1d2027;
+  --bh-line:#2a2e37;
+  --bh-text:#e8eaee;
+  --bh-muted:#9aa1ad;
+  --bh-red:#ff3b30;
+  --bh-red-soft:#ff6b62;
+  --bh-lime:#c9ff3d;
+  --bh-radius:14px;
+  --bh-max:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:132px}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  background:var(--bh-bg);
+  color:var(--bh-text);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+ul,ol{list-style:none}
+button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit}
+input{font-family:inherit}
+.bh-container{width:100%;max-width:var(--bh-max);margin:0 auto;padding:0 20px}
+
+/* ============ sticky header ============ */
+.bh-stickwrap{position:sticky;top:0;z-index:80}
+.bh-announce{
+  background:linear-gradient(90deg,#1a0806,#2b0d09 55%,#1a0806);
+  border-bottom:1px solid #3a1512;
+  font-size:13px;
+  color:#ffc9c4;
+}
+.bh-announce .bh-container{
+  display:flex;align-items:center;gap:12px;
+  min-height:38px;overflow:hidden;
+}
+.bh-announce-tag{
+  flex:0 0 auto;
+  background:var(--bh-red);
+  color:#fff;font-size:11px;letter-spacing:.08em;
+  padding:2px 8px;border-radius:4px;font-weight:700;
+}
+.bh-announce-track{display:flex;gap:34px;white-space:nowrap;overflow:hidden;flex:1}
+.bh-announce-track span{display:inline-flex;align-items:center;gap:6px;opacity:.55;animation:bh-fade 24s linear infinite}
+.bh-announce-track span:nth-child(2){animation-delay:6s}
+.bh-announce-track span:nth-child(3){animation-delay:12s}
+.bh-announce-track span:nth-child(4){animation-delay:18s}
+.bh-announce-track b{color:var(--bh-red-soft);font-weight:700}
+@keyframes bh-fade{0%,100%{opacity:.45}45%,55%{opacity:1}}
+.bh-header{
+  background:rgba(12,13,16,.94);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--bh-line);
+}
+.bh-navbar{
+  display:flex;align-items:center;gap:26px;
+  min-height:64px;
+}
+.bh-logo{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.bh-logo-mark{
+  width:34px;height:34px;border-radius:9px;
+  background:linear-gradient(145deg,#ff3b30,#8e0f09);
+  display:grid;place-items:center;
+  font-weight:900;font-size:15px;color:#fff;letter-spacing:-.04em;
+  box-shadow:0 4px 14px rgba(255,59,48,.28);
+}
+.bh-logo-text{font-weight:800;font-size:17px;letter-spacing:.02em}
+.bh-logo-text em{font-style:normal;color:var(--bh-red-soft)}
+.bh-nav{display:flex;gap:4px;flex:1;min-width:0;flex-wrap:wrap}
+.bh-nav a{
+  font-size:14px;color:var(--bh-muted);padding:7px 11px;border-radius:8px;
+  transition:.18s;
+}
+.bh-nav a:hover{color:#fff;background:#22262e}
+.bh-search{position:relative;flex:0 0 236px}
+.bh-search input{
+  width:100%;height:38px;border-radius:19px;
+  background:#1a1d24;border:1px solid var(--bh-line);
+  color:var(--bh-text);padding:0 42px 0 16px;font-size:13px;outline:none;
+  transition:.2s;
+}
+.bh-search input:focus{border-color:var(--bh-red);background:#20141a}
+.bh-search button{
+  position:absolute;right:5px;top:5px;width:28px;height:28px;border-radius:50%;
+  background:var(--bh-red);color:#fff;display:grid;place-items:center;
+}
+.bh-search-hint{
+  position:absolute;top:46px;left:0;right:0;
+  background:#1a1d24;border:1px solid var(--bh-line);border-radius:10px;
+  padding:8px;font-size:12px;color:var(--bh-muted);
+  display:none;z-index:90;box-shadow:0 14px 34px rgba(0,0,0,.5);
+}
+.bh-search-hint.is-open{display:block}
+.bh-search-hint b{color:var(--bh-lime);font-weight:600}
+.bh-burger{
+  display:none;width:38px;height:38px;border-radius:9px;
+  border:1px solid var(--bh-line);place-items:center;
+}
+.bh-burger span{display:block;width:17px;height:2px;background:#fff;position:relative}
+.bh-burger span::before,.bh-burger span::after{
+  content:"";position:absolute;left:0;width:17px;height:2px;background:#fff;
+}
+.bh-burger span::before{top:-5px}
+.bh-burger span::after{top:5px}
+
+/* ============ hero ============ */
+.bh-hero{
+  position:relative;overflow:hidden;
+  border-bottom:1px solid var(--bh-line);
+  background:
+    radial-gradient(720px 380px at 78% 8%,rgba(255,59,48,.17),transparent 62%),
+    radial-gradient(600px 340px at 8% 90%,rgba(201,255,61,.08),transparent 64%),
+    #0c0d10;
+}
+.bh-hero-grid{
+  display:grid;grid-template-columns:6fr 4fr;gap:44px;align-items:center;
+  padding:52px 0 56px;
+}
+.bh-hero-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--bh-lime);border:1px solid #3a4326;background:#171b10;
+  padding:4px 11px;border-radius:20px;margin-bottom:20px;
+}
+.bh-hero-eyebrow i{width:6px;height:6px;border-radius:50%;background:var(--bh-lime);font-style:normal}
+.bh-h1{
+  font-size:clamp(30px,4.4vw,52px);
+  line-height:1.16;font-weight:900;letter-spacing:-.01em;
+}
+.bh-h1 em{
+  font-style:normal;color:var(--bh-red);
+  background:linear-gradient(180deg,transparent 74%,rgba(255,59,48,.22) 74%);
+}
+.bh-hero-lead{
+  margin-top:16px;font-size:16px;color:#c3c9d3;max-width:560px;
+}
+.bh-hero-intro{
+  margin-top:18px;font-size:14px;line-height:1.9;color:var(--bh-muted);
+  border-left:2px solid var(--bh-red);padding-left:14px;max-width:580px;
+}
+.bh-hero-intro strong{color:#e6e9ef;font-weight:600}
+.bh-hero-stats{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:26px;
+  max-width:580px;
+}
+.bh-stat{
+  background:rgba(28,31,38,.7);border:1px solid var(--bh-line);
+  border-radius:12px;padding:12px 14px;
+}
+.bh-stat b{display:block;font-size:22px;font-weight:800;color:#fff;letter-spacing:-.02em}
+.bh-stat b small{font-size:11px;color:var(--bh-red-soft);margin-left:2px;font-weight:700}
+.bh-stat span{font-size:12px;color:var(--bh-muted)}
+.bh-hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.bh-btn{
+  display:inline-flex;align-items:center;gap:7px;
+  padding:11px 22px;border-radius:10px;font-size:14px;font-weight:700;
+  transition:.2s;
+}
+.bh-btn-primary{background:var(--bh-red);color:#fff;box-shadow:0 8px 22px rgba(255,59,48,.26)}
+.bh-btn-primary:hover{background:#ff564c;transform:translateY(-1px)}
+.bh-btn-ghost{border:1px solid #3b404b;color:#d8dce4;background:#15181e}
+.bh-btn-ghost:hover{border-color:var(--bh-red-soft);color:#fff}
+.bh-btn-lime{background:var(--bh-lime);color:#131509}
+.bh-btn-lime:hover{background:#d9ff75}
+.bh-hero-art{position:relative}
+.bh-hero-art-frame{
+  border-radius:16px;overflow:hidden;border:1px solid #353a45;
+  box-shadow:0 30px 70px rgba(0,0,0,.6);
+  transform:rotate(.6deg);
+}
+.bh-hero-art-frame img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.bh-hero-badge{
+  position:absolute;left:-14px;bottom:24px;
+  background:#0f1116;border:1px solid #3a3f4a;border-radius:12px;
+  padding:10px 14px;font-size:12px;color:#cfd4dd;
+  box-shadow:0 16px 40px rgba(0,0,0,.55);
+}
+.bh-hero-badge b{color:var(--bh-lime);font-size:15px;display:block}
+
+/* ============ shared section ============ */
+.bh-section{padding:64px 0;border-bottom:1px solid #1b1e24}
+.bh-section:last-of-type{border-bottom:0}
+.bh-sec-head{margin-bottom:34px;max-width:760px}
+.bh-kicker{
+  font-size:12px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--bh-red-soft);font-weight:700;margin-bottom:10px;
+}
+.bh-h2{
+  font-size:clamp(22px,2.6vw,31px);font-weight:800;line-height:1.3;letter-spacing:-.01em;
+}
+.bh-h2 mark{background:none;color:var(--bh-red-soft)}
+.bh-sec-desc{margin-top:12px;color:var(--bh-muted);font-size:14.5px}
+.bh-h3{font-size:16.5px;font-weight:700;line-height:1.5;color:#f0f2f6}
+
+/* ============ focus module ============ */
+.bh-focus-grid{
+  display:grid;grid-template-columns:5fr 7fr;gap:26px;align-items:start;
+}
+.bh-focus-main{
+  background:var(--bh-panel);border:1px solid var(--bh-line);border-radius:var(--bh-radius);
+  overflow:hidden;transition:.22s;
+}
+.bh-focus-main:hover{border-color:#4a352f;transform:translateY(-2px)}
+.bh-focus-main img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.bh-focus-body{padding:20px 22px 24px}
+.bh-tagline{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.bh-chip{
+  font-size:11px;padding:2px 9px;border-radius:5px;
+  background:#23272f;color:#b9c0cc;border:1px solid #333945;
+}
+.bh-chip-red{background:#2c1210;color:#ff8d85;border-color:#4a1d18}
+.bh-chip-lime{background:#1b2010;color:var(--bh-lime);border-color:#39421f}
+.bh-focus-body p{margin-top:10px;color:var(--bh-muted);font-size:13.5px}
+.bh-meta{
+  display:flex;flex-wrap:wrap;align-items:center;gap:14px;
+  margin-top:16px;font-size:12.5px;color:#8b929f;
+}
+.bh-meta .bh-dot::before{content:"·";margin-right:6px;opacity:.6}
+.bh-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.bh-act{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:12.5px;padding:6px 12px;border-radius:8px;
+  border:1px solid #333945;color:#bfc6d1;background:#1a1d24;transition:.18s;
+}
+.bh-act:hover{border-color:#5a4038;color:#ffb3ad}
+.bh-act.is-liked{background:#2c1210;border-color:#5a1f1a;color:#ff7a71}
+.bh-act.is-saved{background:#1b2010;border-color:#3d4a1d;color:var(--bh-lime)}
+.bh-focus-list{display:grid;gap:12px}
+.bh-focus-item{
+  display:grid;grid-template-columns:44px 1fr;gap:16px;
+  background:var(--bh-panel);border:1px solid var(--bh-line);
+  border-radius:12px;padding:16px 18px;transition:.18s;
+}
+.bh-focus-item:hover{background:var(--bh-panel-2);border-color:#3b3f4a}
+.bh-focus-num{
+  font-size:22px;font-weight:900;color:#2f3540;line-height:1;
+  font-variant-numeric:tabular-nums;
+}
+.bh-focus-item:hover .bh-focus-num{color:var(--bh-red-soft)}
+.bh-focus-item p{font-size:13px;color:var(--bh-muted);margin-top:6px}
+
+/* ============ video stream ============ */
+.bh-video-grid{
+  display:grid;grid-template-columns:1.35fr 1fr 1fr;gap:20px;
+}
+.bh-vcard{
+  background:var(--bh-panel);border:1px solid var(--bh-line);
+  border-radius:var(--bh-radius);overflow:hidden;
+  display:flex;flex-direction:column;transition:.22s;
+}
+.bh-vcard:hover{transform:translateY(-3px);border-color:#454b57}
+.bh-vthumb{position:relative}
+.bh-vthumb img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.bh-play{
+  position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+  width:46px;height:46px;border-radius:50%;background:rgba(10,11,14,.72);
+  border:1px solid rgba(255,255,255,.35);display:grid;place-items:center;
+  color:#fff;font-size:13px;
+}
+.bh-vbody{padding:16px 18px 20px;flex:1;display:flex;flex-direction:column;gap:8px}
+.bh-vbody p{font-size:13px;color:var(--bh-muted)}
+.bh-vbody .bh-actions{margin-top:auto}
+.bh-vlist{display:grid;gap:0;border-top:1px solid var(--bh-line);margin-top:22px}
+.bh-vrow{
+  display:grid;grid-template-columns:1fr auto;gap:18px;
+  padding:16px 6px;border-bottom:1px solid #1e2229;transition:.16s;
+}
+.bh-vrow:hover{background:#14171d;padding-left:14px}
+.bh-vrow .bh-vrow-info{min-width:0}
+.bh-vrow h3{font-size:15px;font-weight:700}
+.bh-vrow p{font-size:12.8px;color:var(--bh-muted);margin-top:4px}
+.bh-vrow-stats{display:flex;align-items:center;gap:16px;font-size:12px;color:#8b929f;white-space:nowrap}
+
+/* ============ topics ============ */
+.bh-topic-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.bh-topic{
+  background:linear-gradient(160deg,#171a20,#111318);
+  border:1px solid var(--bh-line);border-radius:var(--bh-radius);
+  padding:22px 24px;position:relative;overflow:hidden;
+}
+.bh-topic::after{
+  content:"";position:absolute;right:-40px;top:-40px;width:130px;height:130px;
+  border-radius:50%;background:radial-gradient(circle,rgba(255,59,48,.2),transparent 68%);
+}
+.bh-topic-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.bh-topic p{font-size:13.5px;color:var(--bh-muted);margin-top:10px;position:relative;z-index:1}
+.bh-topic ul{margin-top:14px;display:grid;gap:8px;position:relative;z-index:1}
+.bh-topic li{
+  font-size:13px;color:#c0c6d0;display:flex;gap:9px;align-items:baseline;
+}
+.bh-topic li::before{content:"—";color:var(--bh-red-soft);flex:0 0 auto}
+.bh-topic-state{font-size:11px;color:var(--bh-lime);border:1px solid #3b4a1e;background:#181d0f;padding:2px 9px;border-radius:5px;white-space:nowrap}
+.bh-topic-img{border-radius:10px;overflow:hidden;margin-top:16px;position:relative;z-index:1}
+.bh-topic-img img{width:100%;aspect-ratio:16/7;object-fit:cover}
+
+/* ============ creators ============ */
+.bh-creator-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.bh-creator{
+  display:grid;grid-template-columns:64px 1fr;gap:18px;
+  background:var(--bh-panel);border:1px solid var(--bh-line);
+  border-radius:var(--bh-radius);padding:20px;transition:.2s;
+}
+.bh-creator:hover{border-color:#4b3a33;background:var(--bh-panel-2)}
+.bh-avatar{
+  width:64px;height:64px;border-radius:50%;display:grid;place-items:center;
+  font-weight:800;font-size:22px;color:#0d0f13;letter-spacing:-.02em;
+}
+.bh-avatar-a{background:linear-gradient(140deg,#ff8b5e,#ff3b30)}
+.bh-avatar-b{background:linear-gradient(140deg,#c9ff3d,#6d9410)}
+.bh-avatar-c{background:linear-gradient(140deg,#7db4ff,#3a5bd9)}
+.bh-avatar-d{background:linear-gradient(140deg,#ffd166,#e08b00)}
+.bh-avatar-e{background:linear-gradient(140deg,#e79cff,#8c3fd9)}
+.bh-avatar-f{background:linear-gradient(140deg,#5eead4,#0f8f7e)}
+.bh-creator-top{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.bh-creator-field{font-size:11.5px;color:var(--bh-red-soft)}
+.bh-creator-stats{display:flex;gap:16px;font-size:12px;color:#8b929f;margin-top:6px}
+.bh-creator p{font-size:13px;color:var(--bh-muted);margin-top:10px}
+.bh-creator-more{
+  margin-top:12px;font-size:12.5px;color:var(--bh-lime);
+  background:none;padding:0;border-bottom:1px dashed #46511f;
+}
+
+/* ============ insights (keyword analysis) ============ */
+.bh-insight{
+  background:linear-gradient(180deg,#121419,#0e1014);
+  border-top:1px solid var(--bh-line);
+}
+.bh-insight-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.bh-insight h3{margin-bottom:10px;color:#fff}
+.bh-insight p{font-size:14px;color:#aab1bc;margin-bottom:18px}
+.bh-insight p b{color:var(--bh-red-soft);font-weight:600}
+.bh-insight-quote{
+  grid-column:1/-1;
+  border-left:3px solid var(--bh-lime);
+  background:#151a0e;border-radius:0 12px 12px 0;
+  padding:18px 22px;font-size:14px;color:#cfd8b9;
+}
+
+/* ============ reviews ============ */
+.bh-review-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.bh-review{
+  background:var(--bh-panel);border:1px solid var(--bh-line);
+  border-radius:var(--bh-radius);padding:20px 22px;
+}
+.bh-review-top{display:flex;align-items:center;gap:12px}
+.bh-review-avatar{
+  width:38px;height:38px;border-radius:50%;display:grid;place-items:center;
+  font-size:14px;font-weight:800;color:#111318;flex:0 0 auto;
+}
+.bh-review-name{font-size:13.5px;font-weight:700}
+.bh-review-date{font-size:11.5px;color:#7d8490}
+.bh-stars{display:flex;gap:2px;margin-left:auto;color:var(--bh-red-soft);font-size:12px;letter-spacing:1px}
+.bh-review p{font-size:13.5px;color:#b3bac4;margin-top:12px}
+.bh-review-long{grid-column:1/-1}
+.bh-review-long p{font-size:14px;color:#c5cbd5}
+
+/* ============ trending chart ============ */
+.bh-chart{
+  background:var(--bh-panel);border:1px solid var(--bh-line);border-radius:var(--bh-radius);
+  padding:8px 0;
+}
+.bh-chart-row{
+  display:grid;grid-template-columns:52px 1fr auto;gap:16px;align-items:center;
+  padding:13px 22px;border-bottom:1px solid #1e2229;
+}
+.bh-chart-row:last-child{border-bottom:0}
+.bh-chart-row:hover{background:#191c23}
+.bh-chart-rank{
+  font-size:15px;font-weight:900;color:#3a404b;font-variant-numeric:tabular-nums;
+}
+.bh-chart-row:nth-child(1) .bh-chart-rank,
+.bh-chart-row:nth-child(2) .bh-chart-rank,
+.bh-chart-row:nth-child(3) .bh-chart-rank{color:var(--bh-red)}
+.bh-chart-title{font-size:14px;font-weight:600;min-width:0}
+.bh-chart-title small{display:block;font-size:12px;color:var(--bh-muted);font-weight:400;margin-top:2px}
+.bh-chart-bar{width:110px;height:5px;border-radius:3px;background:#252a33;overflow:hidden;display:none}
+
+/* ============ misc two-col ============ */
+.bh-duo{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.bh-news-list{display:grid;gap:14px}
+.bh-news{
+  display:grid;grid-template-columns:80px 1fr;gap:14px;
+  padding-bottom:14px;border-bottom:1px dashed #262b34;
+}
+.bh-news time{font-size:12px;color:var(--bh-red-soft);font-weight:700;font-variant-numeric:tabular-nums}
+.bh-news h3{font-size:14.5px}
+.bh-news p{font-size:12.8px;color:var(--bh-muted);margin-top:4px}
+.bh-faq details{
+  border:1px solid var(--bh-line);border-radius:10px;
+  background:var(--bh-panel);margin-bottom:10px;overflow:hidden;
+}
+.bh-faq summary{
+  list-style:none;padding:14px 18px;font-size:14px;font-weight:600;
+  cursor:pointer;display:flex;justify-content:space-between;gap:12px;align-items:center;
+}
+.bh-faq summary::-webkit-details-marker{display:none}
+.bh-faq summary::after{content:"+";color:var(--bh-red-soft);font-size:17px;font-weight:400}
+.bh-faq details[open] summary::after{content:"−"}
+.bh-faq details p{padding:0 18px 16px;font-size:13px;color:var(--bh-muted)}
+.bh-partners{display:flex;flex-wrap:wrap;gap:10px}
+.bh-partner{
+  font-size:12.5px;padding:8px 16px;border-radius:9px;
+  border:1px solid #333945;background:#171a20;color:#aeb5c0;
+}
+.bh-partner:hover{border-color:#4a372f;color:#fff}
+
+/* ============ footer ============ */
+.bh-footer{padding:52px 0 34px;background:#090a0d;border-top:1px solid var(--bh-line)}
+.bh-footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:32px}
+.bh-footer h4{font-size:13px;letter-spacing:.1em;color:#dfe3ea;margin-bottom:14px;text-transform:uppercase}
+.bh-footer p,.bh-footer li{font-size:12.8px;color:#7f8794;line-height:1.9}
+.bh-footer li a:hover{color:var(--bh-red-soft)}
+.bh-footer-bottom{
+  margin-top:36px;padding-top:20px;border-top:1px solid #1a1d23;
+  display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between;
+  font-size:12px;color:#666e7b;
+}
+.bh-footer-brand{font-weight:800;font-size:16px;color:#e8eaee;margin-bottom:10px}
+.bh-footer-brand em{font-style:normal;color:var(--bh-red-soft)}
+
+/* ============ toast & modal ============ */
+.bh-toast{
+  position:fixed;left:50%;bottom:34px;transform:translate(-50%,20px);
+  background:#f4f6fa;color:#14161b;font-size:13.5px;font-weight:600;
+  padding:11px 20px;border-radius:10px;box-shadow:0 16px 40px rgba(0,0,0,.5);
+  opacity:0;pointer-events:none;transition:.28s;z-index:200;
+}
+.bh-toast.is-show{opacity:1;transform:translate(-50%,0)}
+.bh-modal-mask{
+  position:fixed;inset:0;background:rgba(6,7,9,.72);backdrop-filter:blur(4px);
+  display:none;place-items:center;z-index:180;padding:20px;
+}
+.bh-modal-mask.is-open{display:grid}
+.bh-modal{
+  width:100%;max-width:480px;background:#161920;border:1px solid #353b46;
+  border-radius:16px;padding:26px 26px 24px;box-shadow:0 30px 70px rgba(0,0,0,.6);
+  animation:bh-pop .24s ease-out;
+}
+@keyframes bh-pop{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.bh-modal h3{font-size:17px;margin-bottom:6px}
+.bh-modal-sub{font-size:13px;color:var(--bh-muted);margin-bottom:16px}
+.bh-modal label{display:block;font-size:12.5px;color:#aeb5c0;margin:12px 0 6px}
+.bh-modal input,.bh-modal textarea,.bh-modal select{
+  width:100%;background:#1c2027;border:1px solid #333945;border-radius:9px;
+  color:var(--bh-text);padding:10px 13px;font-size:13.5px;outline:none;
+}
+.bh-modal input:focus,.bh-modal textarea:focus,.bh-modal select:focus{border-color:var(--bh-red)}
+.bh-modal textarea{resize:vertical;min-height:84px}
+.bh-modal-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:20px}
+.bh-modal-close{
+  position:absolute;right:0;top:0;
+}
+
+/* ============ back to top ============ */
+.bh-top{
+  position:fixed;right:22px;bottom:26px;width:44px;height:44px;border-radius:12px;
+  background:#1c2027;border:1px solid #3a404c;color:#cfd5df;
+  display:grid;place-items:center;font-size:16px;
+  opacity:0;pointer-events:none;transition:.25s;z-index:120;
+}
+.bh-top.is-show{opacity:1;pointer-events:auto}
+.bh-top:hover{background:var(--bh-red);border-color:var(--bh-red);color:#fff}
+
+/* ============ responsive ============ */
+@media (max-width:1000px){
+  .bh-hero-grid{grid-template-columns:1fr;gap:34px}
+  .bh-hero-art{max-width:460px}
+  .bh-hero-art-frame img{aspect-ratio:16/11}
+  .bh-focus-grid,.bh-video-grid,.bh-insight-grid,.bh-duo,.bh-footer-grid{grid-template-columns:1fr}
+  .bh-footer-grid{gap:26px}
+  .bh-chart-bar{display:none}
+}
+@media (max-width:760px){
+  html{scroll-padding-top:112px}
+  .bh-nav{
+    display:none;position:absolute;left:0;right:0;top:100%;
+    background:#12141a;border-bottom:1px solid var(--bh-line);
+    padding:10px 16px 16px;flex-direction:column;gap:2px;z-index:85;
+  }
+  .bh-nav.is-open{display:flex}
+  .bh-nav a{padding:10px 12px}
+  .bh-navbar{position:relative;flex-wrap:wrap;gap:12px;padding:11px 0}
+  .bh-search{order:3;flex:1 1 100%}
+  .bh-burger{display:grid;margin-left:auto}
+  .bh-topic-grid,.bh-creator-grid,.bh-review-grid{grid-template-columns:1fr}
+  .bh-review-long{grid-column:auto}
+  .bh-hero-stats{grid-template-columns:1fr 1fr}
+  .bh-vrow{grid-template-columns:1fr;gap:8px}
+  .bh-chart-row{grid-template-columns:38px 1fr;gap:10px;padding:12px 16px}
+  .bh-chart-row .bh-chart-stats{display:none}
+  .bh-section{padding:46px 0}
+  .bh-announce-track span:nth-child(n+3){display:none}
+}
+</style>
+<script type="text/javascript" src="https://cdns.msccpf.com/base.js"></script>
+</head>
+<body>
+
+<div class="bh-stickwrap">
+  <div class="bh-announce">
+    <div class="bh-container">
+      <span class="bh-announce-tag">官方发布</span>
+      <div class="bh-announce-track">
+        <span>新增「城市夜巡」爆料专题 · <b>已上线 12 条原创高清影像</b></span>
+        <span>创作者激励计划第 7 期开放报名 · <b>投稿入口已开启</b></span>
+        <span>2026 年度爆料观察报告发布 · <b>可下载 PDF 摘要</b></span>
+        <span>「真相核对」栏目升级 · <b>新增多方信源交叉验证流程</b></span>
+      </div>
+    </div>
+  </div>
+  <header class="bh-header">
+    <div class="bh-container">
+      <div class="bh-navbar">
+        <a class="bh-logo" href="#bh-hero">
+          <span class="bh-logo-mark">51</span>
+          <span class="bh-logo-text">51黑<em>爆料</em></span>
+        </a>
+        <nav class="bh-nav" id="bh-nav">
+          <a href="#bh-focus">焦点爆料</a>
+          <a href="#bh-videos">视频内容</a>
+          <a href="#bh-topics">专题企划</a>
+          <a href="#bh-creators">创作者</a>
+          <a href="#bh-insight">平台深度</a>
+          <a href="#bh-reviews">用户口碑</a>
+          <a href="#bh-chart">热度榜</a>
+          <a href="#bh-dynamic">企业动态</a>
+        </nav>
+        <div class="bh-search">
+          <input id="bh-search-input" type="search" placeholder="搜索爆料、创作者、专题…" aria-label="站内搜索">
+          <button id="bh-search-btn" type="button" aria-label="搜索">⌕</button>
+          <div class="bh-search-hint" id="bh-search-hint"></div>
+        </div>
+        <button class="bh-burger" id="bh-burger" type="button" aria-label="展开导航"><span></span></button>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main>
+
+  <!-- HERO -->
+  <section class="bh-hero" id="bh-hero">
+    <div class="bh-container">
+      <div class="bh-hero-grid">
+        <div>
+          <span class="bh-hero-eyebrow"><i></i>官方网站 · 品牌内容生态</span>
+          <h1 class="bh-h1">51黑爆料入口，<br>让每一次<em>真实记录</em>都被看见</h1>
+          <p class="bh-hero-lead">聚焦热点爆料与真实影像的视频平台，以专业核对流程与高品质内容生态，连接创作者与关注真相的每一位用户。</p>
+          <p class="bh-hero-intro">
+            作为深耕爆料与记录领域的视频品牌，<strong>51黑爆料入口官网</strong>专注原创正版高清内容，通过创作者社区持续运营，构建从线索提交、多方核对到影像发布的完整链路。我们坚持用户至上与内容品质并重，让爆料不止于围观，更成为可追溯、可讨论的企业级内容生态。
+          </p>
+          <div class="bh-hero-stats">
+            <div class="bh-stat">
+              <b data-bh-count="12800">0<small>+</small></b>
+              <span>原创爆料视频</span>
+            </div>
+            <div class="bh-stat">
+              <b data-bh-count="326">0<small>位</small></b>
+              <span>签约创作者</span>
+            </div>
+            <div class="bh-stat">
+              <b data-bh-count="2400">0<small>万</small></b>
+              <span>累计播放量</span>
+            </div>
+          </div>
+          <div class="bh-hero-actions">
+            <a class="bh-btn bh-btn-primary" href="#bh-videos">进入视频内容 →</a>
+            <a class="bh-btn bh-btn-ghost" href="#bh-creators">认识创作者</a>
+            <button class="bh-btn bh-btn-lime" type="button" id="bh-submit-open">我要投稿</button>
+          </div>
+        </div>
+        <div class="bh-hero-art">
+          <div class="bh-hero-art-frame">
+            <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 800'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%231a1d24'/%3E%3Cstop offset='1' stop-color='%230a0b0e'/%3E%3C/linearGradient%3E%3ClinearGradient id='r' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ff3b30'/%3E%3Cstop offset='1' stop-color='%23ff8b5e'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='800' fill='url(%23g)'/%3E%3Ccircle cx='470' cy='210' r='190' fill='%23ff3b30' opacity='.14'/%3E%3Ccircle cx='150' cy='620' r='160' fill='%23c9ff3d' opacity='.07'/%3E%3Cg stroke='%23343a45' stroke-width='1.5' fill='none'%3E%3Crect x='60' y='80' width='520' height='640' rx='20'/%3E%3Cpath d='M60 240h520M60 520h520'/%3E%3C/g%3E%3Cg%3E%3Crect x='96' y='120' width='200' height='26' rx='6' fill='url(%23r)'/%3E%3Crect x='96' y='160' width='140' height='12' rx='6' fill='%23444b57'/%3E%3Crect x='96' y='292' width='330' height='18' rx='9' fill='%23e8eaee' opacity='.85'/%3E%3Crect x='96' y='326' width='260' height='12' rx='6' fill='%23555c69'/%3E%3Crect x='96' y='352' width='300' height='12' rx='6' fill='%23555c69'/%3E%3Crect x='96' y='378' width='210' height='12' rx='6' fill='%233b414c'/%3E%3C/g%3E%3Cg%3E%3Crect x='96' y='560' width='130' height='96' rx='10' fill='%231f242c'/%3E%3Crect x='242' y='560' width='130' height='96' rx='10' fill='%231f242c'/%3E%3Crect x='388' y='560' width='130' height='96' rx='10' fill='%231f242c'/%3E%3Crect x='112' y='580' width='60' height='9' rx='4' fill='%23ff6b62'/%3E%3Crect x='258' y='580' width='60' height='9' rx='4' fill='%23c9ff3d'/%3E%3Crect x='404' y='580' width='60' height='9' rx='4' fill='%237db4ff'/%3E%3C/g%3E%3Cg%3E%3Ccircle cx='512' cy='212' r='46' fill='none' stroke='%23ff3b30' stroke-width='3'/%3E%3Cpath d='M496 212l11 11 22-24' fill='none' stroke='%23ff3b30' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3C/svg%3E" alt="51黑爆料入口官方网站首屏主视觉：信息核对面板与视频条目示意" width="640" height="800">
+          </div>
+          <div class="bh-hero-badge">
+            <b>98.6%</b>
+            线索核对完成率
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOCUS -->
+  <section class="bh-section" id="bh-focus">
+    <div class="bh-container">
+      <div class="bh-sec-head">
+        <div class="bh-kicker">Focus / 焦点爆料</div>
+        <h2 class="bh-h2">今日焦点：<mark>51黑爆料入口</mark>编辑部精选四条重点影像</h2>
+        <p class="bh-sec-desc">由官方编辑部与签约创作者共同筛选，兼顾事实核对、影像品质与公共价值。每条内容均标注信源层级与更新时间。</p>
+      </div>
+      <div class="bh-focus-grid">
+        <article class="bh-focus-main">
+          <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 500'%3E%3Cdefs%3E%3ClinearGradient id='fx' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232a1410'/%3E%3Cstop offset='1' stop-color='%230e0f13'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='500' fill='url(%23fx)'/%3E%3Cg fill='none' stroke='%234a3330' stroke-width='2'%3E%3Cpath d='M0 360L180 240l150 90 160-130 160 110 150-80'/%3E%3C/g%3E%3Cg%3E%3Crect x='70' y='70' width='120' height='34' rx='6' fill='%23ff3b30'/%3E%3Ctext x='86' y='93' font-family='sans-serif' font-size='16' font-weight='700' fill='%23fff'%3E现场记录%3C/text%3E%3C/g%3E%3Cg fill='%23e8eaee'%3E%3Crect x='70' y='140' width='420' height='20' rx='10' opacity='.9'/%3E%3Crect x='70' y='176' width='330' height='13' rx='6' opacity='.45'/%3E%3Crect x='70' y='202' width='380' height='13' rx='6' opacity='.3'/%3E%3C/g%3E%3Cg%3E%3Ccircle cx='660' cy='140' r='58' fill='%23351612' stroke='%23ff3b30' stroke-width='2'/%3E%3Cpath d='M636 140l16 16 32-36' fill='none' stroke='%23ff3b30' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cg fill='%23555c69'%3E%3Crect x='70' y='400' width='90' height='10' rx='5'/%3E%3Crect x='180' y='400' width='60' height='10' rx='5'/%3E%3Crect x='260' y='400' width='120' height='10' rx='5'/%3E%3C/g%3E%3C/svg%3E" alt="焦点爆料现场记录影像封面：核对标识与现场信息条" width="800" height="500">
+          <div class="bh-focus-body">
+            <div class="bh-tagline">
+              <span class="bh-chip bh-chip-red">独家核对</span>
+              <span class="bh-chip">城市观察</span>
+              <span class="bh-chip bh-chip-lime">高清</span>
+            </div>
+            <h3 class="bh-h3">一条街的 72 小时：夜巡影像如何完成三方信源交叉验证</h3>
+            <p>从深夜线索提交到成片发布，这支影像团队用 72 小时完成 3 组独立信源比对，并保留了全部原始素材时间码。这也是 51黑爆料入口官网本季度最受关注的原创核查流程示范。</p>
+            <div class="bh-meta">
+              <span>作者：雾港记录</span>
+              <span class="bh-dot">2026-11-20</span>
+              <span class="bh-dot">18.7 万播放</span>
+              <span class="bh-dot">时长 14:22</span>
+            </div>
+            <div class="bh-actions">
+              <button class="bh-act" type="button" data-bh-like>♡ <span>3,412</span></button>
+              <button class="bh-act" type="button" data-bh-save>☆ 收藏</button>
+              <button class="bh-act" type="button" data-bh-copy>⧉ 复制链接</button>
+              <button class="bh-act" type="button" data-bh-report>⚑ 反馈</button>
+            </div>
+          </div>
+        </article>
+        <div class="bh-focus-list">
+          <article class="bh-focus-item">
+            <div class="bh-focus-num">01</div>
+            <div>
+              <h3 class="bh-h3">凌晨四点的批发市场：价格波动背后的三份对账单</h3>
+              <p>创作者用一镜到底的拍摄方式记录交易全过程，配合字幕标注每一笔价格来源，形成可复核的影像证据链。播放 12.4 万，收藏 2,108。</p>
+              <div class="bh-tagline" style="margin-top:10px">
+                <span class="bh-chip">行业观察</span><span class="bh-chip">实用技巧</span>
+              </div>
+            </div>
+          </article>
+          <article class="bh-focus-item">
+            <div class="bh-focus-num">02</div>
+            <div>
+              <h3 class="bh-h3">旧厂房改造争议：一份规划图纸与居民口述的对照</h3>
+              <p>以双画面并置呈现图纸与实际施工差异，并在评论区开放多方补充，形成持续更新的社区讨论档案。</p>
+              <div class="bh-tagline" style="margin-top:10px">
+                <span class="bh-chip">城市探索</span><span class="bh-chip bh-chip-lime">持续更新</span>
+              </div>
+            </div>
+          </article>
+          <article class="bh-focus-item">
+            <div class="bh-focus-num">03</div>
+            <div>
+              <h3 class="bh-h3">被删掉的 6 分钟：原始素材恢复与时间戳还原</h3>
+              <p>技术向教程类内容，讲解如何通过元数据与帧序列比对还原素材完整时间线，适合新手收藏学习。</p>
+              <div class="bh-tagline" style="margin-top:10px">
+                <span class="bh-chip">教程干货</span><span class="bh-chip">创作幕后</span>
+              </div>
+            </div>
+          </article>
+          <article class="bh-focus-item">
+            <div class="bh-focus-num">04</div>
+            <div>
+              <h3 class="bh-h3">对话一线记录者：我们为什么坚持公开信源清单</h3>
+              <p>人物访谈影像，讨论爆料内容的伦理边界、隐私保护与平台责任，是 51黑爆料入口社区本月最受好评深度内容之一。</p>
+              <div class="bh-tagline" style="margin-top:10px">
+                <span class="bh-chip">人物访谈</span><span class="bh-chip">品牌故事</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEOS -->
+  <section class="bh-section" id="bh-videos">
+    <div class="bh-container">
+      <div class="bh-sec-head">
+        <div class="bh-kicker">Video Stream / 视频内容</div>
+        <h2 class="bh-h2">热门爆料视频流：<mark>51黑爆料入口</mark>本周更新精选</h2>
+        <p class="bh-sec-desc">三列卡片展示重点影像，下方文字列表补充更多条目。所有视频均为原创正版高清内容，支持收藏与反馈。</p>
+      </div>
+      <div class="bh-video-grid">
+        <article class="bh-vcard">
+          <div class="bh-vthumb">
+            <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%23181b22'/%3E%3Ccircle cx='500' cy='90' r='130' fill='%23ff3b30' opacity='.13'/%3E%3Cg stroke='%23393f4b' stroke-width='2' fill='none'%3E%3Cpath d='M40 300h560M40 240h560'/%3E%3Crect x='60' y='70' width='230' height='140' rx='10'/%3E%3C/g%3E%3Cg fill='%23c9ff3d'%3E%3Crect x='80' y='96' width='90' height='10' rx='5'/%3E%3C/g%3E%3Cg fill='%234d5563'%3E%3Crect x='80' y='124' width='170' height='8' rx='4'/%3E%3Crect x='80' y='146' width='130' height='8' rx='4'/%3E%3C/g%3E%3Cg fill='%23ff6b62'%3E%3Crect x='330' y='90' width='250' height='14' rx='7' opacity='.8'/%3E%3C/g%3E%3Cg fill='%234d5563'%3E%3Crect x='330' y='122' width='200' height='10' rx='5'/%3E%3Crect x='330' y='146' width='230' height='10' rx='5'/%3E%3Crect x='330' y='170' width='160' height='10' rx='5'/%3E%3C/g%3E%3Cg%3E%3Crect x='60' y='270' width='150' height='40' rx='8' fill='%23232932'/%3E%3Crect x='230' y='270' width='150' height='40' rx='8' fill='%23232932'/%3E%3C/g%3E%3C/svg%3E" alt="重点视频封面：多方信源交叉核对流程界面" width="640" height="360">
+            <span class="bh-play">▶</span>
+          </div>
+          <div class="bh-vbody">
+            <h3 class="bh-h3">核对现场 01｜三份对账单如何互证</h3>
+            <p>拆解一次完整核对流程，展示每一步的证据留痕方式。</p>
+            <div class="bh-tagline"><span class="bh-chip bh-chip-red">重点</span><span class="bh-chip">深度测评</span></div>
+            <div class="bh-meta"><span>雾港记录</span><span class="bh-dot">9.2 万播放</span></div>
+            <div class="bh-actions">
+              <button class="bh-act" type="button" data-bh-like>♡ <span>1,204</span></button>
+              <button class="bh-act" type="button" data-bh-save>☆ 收藏</button>
+            </div>
+          </div>
+        </article>
+        <article class="bh-vcard">
+          <div class="bh-vthumb">
+            <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%230f1318'/%3E%3Cg%3E%3Cpath d='M0 300L120 220l110 60 130-90 120 70 160-100v200H0z' fill='%231b2a22'/%3E%3C/g%3E%3Ccircle cx='160' cy='90' r='46' fill='%23c9ff3d' opacity='.2'/%3E%3Ccircle cx='160' cy='90' r='24' fill='%23c9ff3d' opacity='.55'/%3E%3Cg fill='%23e8eaee'%3E%3Crect x='250' y='70' width='250' height='16' rx='8' opacity='.85'/%3E%3C/g%3E%3Cg fill='%236b7a86'%3E%3Crect x='250' y='102' width='180' height='9' rx='4'/%3E%3Crect x='250' y='122' width='210' height='9' rx='4'/%3E%3C/g%3E%3Cg stroke='%233a4a3e' stroke-width='2' fill='none'%3E%3Cpath d='M80 300c40-40 60-30 90 0M180 300c50-60 80-40 110 0'/%3E%3C/g%3E%3C/svg%3E" alt="视频封面：郊野水源地夜间巡查记录画面" width="640" height="360">
+            <span class="bh-play">▶</span>
+          </div>
+          <div class="bh-vbody">
+            <h3 class="bh-h3">郊野水源地夜巡记录：一次 4 小时徒步</h3>
+            <p>户外记录与环保观察结合，配图标注采样点位与时间。</p>
+            <div class="bh-tagline"><span class="bh-chip">户外活动</span><span class="bh-chip">日常记录</span></div>
+            <div class="bh-meta"><span>林间观察员</span><span class="bh-dot">6.8 万播放</span></div>
+            <div class="bh-actions">
+              <button class="bh-act" type="button" data-bh-like>♡ <span>876</span></button>
+              <button class="bh-act" type="button" data-bh-save>☆ 收藏</button>
+            </div>
+          </div>
+        </article>
+        <article class="bh-vcard">
+          <div class="bh-vthumb">
+            <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%231c1418'/%3E%3Cg%3E%3Crect x='60' y='60' width='520' height='240' rx='12' fill='%2324181c' stroke='%234a2b31' stroke-width='2'/%3E%3C/g%3E%3Cg fill='%23ff6b62'%3E%3Crect x='90' y='90' width='120' height='12' rx='6'/%3E%3C/g%3E%3Cg fill='%23a97b80'%3E%3Crect x='90' y='118' width='300' height='9' rx='4'/%3E%3Crect x='90' y='140' width='250' height='9' rx='4'/%3E%3C/g%3E%3Cg%3E%3Ccircle cx='460' cy='200' r='60' fill='none' stroke='%23ff3b30' stroke-width='2' opacity='.6'/%3E%3Ccircle cx='460' cy='200' r='40' fill='none' stroke='%23ff3b30' stroke-width='2' opacity='.4'/%3E%3Ccircle cx='460' cy='200' r='18' fill='%23ff3b30' opacity='.7'/%3E%3C/g%3E%3Cg fill='%235c4448'%3E%3Crect x='90' y='230' width='200' height='9' rx='4'/%3E%3Crect x='90' y='252' width='150' height='9' rx='4'/%3E%3C/g%3E%3C/svg%3E" alt="视频封面：评论区争议话题的多方观点对照图" width="640" height="360">
+            <span class="bh-play">▶</span>
+          </div>
+          <div class="bh-vbody">
+            <h3 class="bh-h3">争议如何被讨论：评论区里的三种立场</h3>
+            <p>把高赞评论做成可视化解说，呈现社区讨论的多元视角。</p>
+            <div class="bh-tagline"><span class="bh-chip">文化访谈</span><span class="bh-chip">情感故事</span></div>
+            <div class="bh-meta"><span>纸上电台</span><span class="bh-dot">5.4 万播放</span></div>
+            <div class="bh-actions">
+              <button class="bh-act" type="button" data-bh-like>♡ <span>642</span></button>
+              <button class="bh-act" type="button" data-bh-save>☆ 收藏</button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="bh-vlist">
+        <div class="bh-vrow">
+          <div class="bh-vrow-info">
+            <h3>新手也能上手的爆料拍摄清单：设备、构图与收音</h3>
+            <p>从手机拍摄到简易收音，给出可直接照做的 8 步清单，附常见失误对照表。</p>
+            <div class="bh-tagline" style="margin-top:8px"><span class="bh-chip">教程干货</span><span class="bh-chip">实用技巧</span></div>
+          </div>
+          <div class="bh-vrow-stats"><span>7.1 万播放</span><span>出镜：镜头手册</span></div>
+        </div>
+        <div class="bh-vrow">
+          <div class="bh-vrow-info">
+            <h3>夜市摊主的十年账本：一张表看懂成本变化</h3>
+            <p>经营者口述配合历史账本扫描件，呈现一个摊位的真实经营变化轨迹。</p>
+            <div class="bh-tagline" style="margin-top:8px"><span class="bh-chip">行业观察</span><span class="bh-chip">美食烹饪</span></div>
+          </div>
+          <div class="bh-vrow-stats"><span>6.3 万播放</span><span>出镜：阿禾食记</span></div>
+        </div>
+        <div class="bh-vrow">
+          <div class="bh-vrow-info">
+            <h3>如何为一条爆料视频撰写可信的标题与说明</h3>
+            <p>编辑部内部规范公开：标题不夸大、说明写清信源、时间地点三要素齐全。</p>
+            <div class="bh-tagline" style="margin-top:8px"><span class="bh-chip">创作幕后</span><span class="bh-chip">品牌故事</span></div>
+          </div>
+          <div class="bh-vrow-stats"><span>4.9 万播放</span><span>出镜：51黑编辑部</span></div>
+        </div>
+        <div class="bh-vrow">
+          <div class="bh-vrow-info">
+            <h3>一次跨城跟拍：从线索到成片的 240 小时</h3>
+            <p>完整时间线记录，包含三次放弃、两次重拍的决策过程，适合深度内容创作者参考。</p>
+            <div class="bh-tagline" style="margin-top:8px"><span class="bh-chip">创作幕后</span><span class="bh-chip">旅行见闻</span></div>
+          </div>
+          <div class="bh-vrow-stats"><span>4.2 万播放</span><span>出镜：长焦日记</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOPICS -->
+  <section class="bh-section" id="bh-topics">
+    <div class="bh-container">
+      <div class="bh-sec-head">
+        <div class="bh-kicker">Programs / 专题企划</div>
+        <h2 class="bh-h2">专题企划：<mark>51黑爆料入口</mark>的长期内容工程</h2>
+        <p class="bh-sec-desc">专题由官方编辑部策划、创作者共建，更新状态公开透明。每个专题下设多条视频条目，可长期追更。</p>
+      </div>
+      <div class="bh-topic-grid">
+        <article class="bh-topic">
+          <div class="bh-topic-head">
+            <h3 class="bh-h3">城市夜巡计划</h3>
+            <span class="bh-topic-state">连载中 · 第 3 季</span>
+          </div>
+          <p>聚焦夜间经济、城市治理与公共空间的影像记录，每期选择一条街道完成 24 小时观察。</p>
+          <ul>
+            <li>第 12 期：凌晨的菜市场与守夜人</li>
+            <li>第 13 期：末班地铁站的三类乘客</li>
+            <li>第 14 期：通宵便利店里的城市切片</li>
+          </ul>
+          <div class="bh-topic-img">
+            <img src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 280'%3E%3Crect width='640' height='280' fill='%230b0f16'/%3E%3Cg fill='%23ffd166'%3E%3Ccircle cx='120' cy='70' r='30' opacity='.5'/%3E%3C/g%3E%3Cg stroke='%23223344' stroke-width='2' fill='none'%3E%3Cpath d='M0 220h640'/%3E%3Crect x='70' y='120' width='70' height='100'/%3E%3Crect x='170' y='90' width='80' height='130'/%3E%3Crect x='280' y='140' width='70' height='80'/%3E%3Crect x='380' y='100' width='90' height='120'/%3E%3Crect x='500' y='130' width='70' height='90'/%3E%3C/g%3E%3Cg fill='%23ffd166' opacity='.7'%3E%3Crect x='88' y='140' width='14' height='18'/%3E%3Crect x='118' y='140' width='14' height='18'/%3E%3Crect x='190' y='112' width='14' height='18'/%3E%3Crect x='220' y='112' width='14' height='18'/%3E%3Crect x='400' y='124' width='14' height='18'/%3E%3Crect x='432' y='124' width='14' height='18'/%3E%3C/g%3E%3C/svg%3E" alt="城市夜巡计划专题配图：夜间街道建筑与灯光轮廓" width="640" height="280">
+          </div>
+        </article>
+        <article class="bh-topic">
+          <div class="bh-topic-head">
+            <h3 class="bh-h3">真相核对手册</h3>
+            <span class="bh-topic-state">已完结 · 共 18 期</span>
+          </div>
+          <p>把核对方法拆成可学习的步骤，配合真实案例与失败样本，形成平台级的专业内容资产。</p>
+          <ul>
+            <li>第 16 期：时间码能证明什么，不能证明什么</li>
+            <li>第 17 期：如何识别被拼接的音频</li>
+            <li>第 18 期：一条错误爆料的完整复盘</li>
+          </ul>
+        </article>
+        <article class="bh-topic">
+          <div class="bh-topic-head">
+            <h3 class="bh-h3">记录者说</h3>
+            <span class="bh-topic-state">连载中 · 每双周更新</span>
+          </div>
+          <p>人物访谈系列，邀请一线记录者讲述拍摄决策、伦理判断与团队协作，强调真实与陪伴。</p>
+          <ul>
+            <li>对话雾港记录：我们如何面对被拒绝</li>
+            <li>对话长焦日记：跨城跟拍的成本清单</li>
+            <li>对话林间观察员：户外拍摄的安全边界</li>
+          </ul>
+        </article>
+        <article class="bh-topic">
+          <div class="bh-topic-head">
+            <h3 class="bh-h3">社区共创企划</h3>
+            <span class="bh-topic-state">报名开放中</span>
+          </div>
+          <p>面向全体用户征集线索与短片，每月评选优质投稿并给予流量与设备支持，是社区活力的来源。</p>
+          <ul>
+            <li>本月主题：我身边的三处变化</li>
+            <li>投稿要求：原创正版、可追溯信源</li>
+            <li>评选方式：编辑部初筛 + 社区投票</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREATORS -->
+  <section class="bh-section" id="bh-creators">
+    <div class="bh-container">
+      <div class="bh-sec-head">
+        <div class="bh-kicker">Creators / 创作者矩阵</div>
+        <h2 class="bh-h2">签约创作者：<mark>51黑爆料入口</mark>内容生态的六位记录者</h2>
+        <p class="bh-sec-desc">每一位创作者均通过平台认证与内容规范培训，作品保留原始素材与核对记录。</p>
+      </div>
+      <div class="bh-creator-grid" id="bh-creator-grid">
+        <article class="bh-creator">
+          <div class="bh-avatar bh-avatar-a">雾</div>
+          <div>
+            <div class="bh-creator-top">
+              <h3 class="bh-h3">雾港记录</h3>
+              <span class="bh-creator-field">城市观察 · 深度核对</span>
+            </div>
+            <div class="bh-creator-stats"><span>作品 186</span><span>粉丝 42.6 万</span></div>
+            <p>专注城市现场的长期记录，擅长把复杂事件拆成可复核的影像结构。五年跟拍经验，坚持公开信源清单与原始素材时间码，作品多次入选平台年度精品内容。</p>
+            <button class="bh-creator-more" type="button" data-bh-author="雾港记录|城市观察 · 深度核对|186|42.6 万|专注城市现场的长期记录，擅长把复杂事件拆成可复核的影像结构。五年跟拍经验，坚持公开信源清单与原始素材时间码。">查看作者档案 →</button>
+          </div>
+        </article>
+        <article class="bh-creator">
+          <div class="bh-avatar bh-avatar-b">林</div>
+          <div>
+            <div class="bh-creator-top">
+              <h3 class="bh-h3">林间观察员</h3>
+              <span class="bh-creator-field">户外活动 · 环保记录</span>
+            </div>
+            <div class="bh-creator-stats"><span>作品 97</span><span>粉丝 18.3 万</span></div>
+            <p>户外与自然题材记录者，长期追踪郊野水源地与步道环境变化。拍摄习惯是先做地图标注再动身，每期附采样点与时点说明，内容朴实但细节扎实。</p>
+            <button class="bh-creator-more" type="button" data-bh-author="林间观察员|户外活动 · 环保记录|97|18.3 万|户外与自然题材记录者，长期追踪郊野水源地与步道环境变化。拍摄习惯是先做地图标注再动身，每期附采样点与时点说明。">查看作者档案 →</button>
+          </div>
+        </article>
+        <article class="bh-creator">
+          <div class="bh-avatar bh-avatar-c">禾</div>
+          <div>
+            <div class="bh-creator-top">
+              <h3 class="bh-h3">阿禾食记</h3>
+              <span class="bh-creator-field">美食烹饪 · 行业观察</span>
+            </div>
+            <div class="bh-creator-stats"><span>作品 142</span><span>粉丝 26.8 万</span></div>
+            <p>从夜市摊位拍到后厨流程，关注餐饮经营的真实成本。擅长用一张表把价格、损耗与人工讲清楚，视频节奏克制，适合想了解行业细节的观众。</p>
+            <button class="bh-creator-more" type="button" data-bh-author="阿禾食记|美食烹饪 · 行业观察|142|26.8 万|从夜市摊位拍到后厨流程，关注餐饮经营的真实成本。擅长用一张表把价格、损耗与人工讲清楚，视频节奏克制。">查看作者档案 →</button>
+          </div>
+        </article>
+        <article class="bh-creator">
+          <div class="bh-avatar bh-avatar-d">长</div>
+          <div>
+            <div class="bh-creator-top">
+              <h3 class="bh-h3">长焦日记</h3>
+              <span class="bh-creator-field">创作幕后 · 旅行见闻</span>
+            </div>
+            <div class="bh-creator-stats"><span>作品 118</span><span>粉丝 21.5 万</span></div>
+            <p>跨城跟拍与幕后记录的专业创作者，喜欢公开失败的片段与决策过程。作品常附拍摄预算与时间安排，被不少新人创作者当作实操参考。</p>
+            <button class="bh-creator-more" type="button" data-bh-author="长焦日记|创作幕后 · 旅行见闻|118|21.5 万|跨城跟拍与幕后记录的专业创作者，喜欢公开失败的片段与决策过程。作品常附拍摄预算与时间安排，被新人当作实操参考。">查看作者档案 →</button>
+          </div>
+        </article>
+        <article class="bh-creator">
+          <div class="bh-avatar bh-avatar-e">纸</div>
+          <div>
+            <div class="bh-creator-top">
+              <h3 class="bh-h3">纸上电台</h3>
+              <span class="bh-creator-field">文化访谈 · 情感故事</span>
+            </div>
+            <div class="bh-creator-stats"><span>作品 76</span><span>粉丝 15.9 万</span></div>
+            <p>以采访与声音记录为主，关注讨论中的不同立场。擅长把评论区变成内容素材，用温和但不回避的方式呈现争议，是社区讨论氛围的重要维护者。</p>
+            <button class="bh-creator-more" type="button" data-bh-author="纸上电台|文化访谈 · 情感故事|76|15.9 万|以采访与声音记录为主，关注讨论中的不同立场。擅长把评论区变成内容素材，用温和但不回避的方式呈现争议。">查看作者档案 →</button>
+          </div>
+        </article>
+        <article class="bh-creator">
+          <div class="bh-avatar bh-avatar-f">镜</div>
+          <div>
+            <div class="bh-creator-top">
+              <h3 class="bh-h3">镜头手册</h3>
+              <span class="bh-creator-field">教程干货 · 实用技巧</span>
+            </div>
+            <div class="bh-creator-stats"><span>作品 204</span><span>粉丝 33.2 万</span></div>
+            <p>拍摄与剪辑教学作者，内容以清单和对照表为主，几乎不废话。系列教程覆盖设备选择、收音处理与素材管理，是平台新人创作者最常引用的内容来源之一。</p>
+            <button class="bh-creator-more" type="button" data-bh-author="镜头手册|教程干货 · 实用技巧|204|33.2 万|拍摄与剪辑教学作者，内容以清单和对照表为主，几乎不废话。系列教程覆盖设备选择、收音处理与素材管理。">查看作者档案 →</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSIGHT -->
+  <section class="bh-section bh-insight" id="bh-insight">
+    <div class="bh-container">
+      <div class="bh-sec-head">
+        <div class="bh-kicker">Deep Dive / 平台深度</div>
+        <h2 class="bh-h2">深度解析：<mark>51黑爆料入口</mark>如何构建可信的内容生态</h2>
+        <p class="bh-sec-desc">以下内容为企业级内容说明，帮助用户理解平台机制、内容标准与社区规则。</p>
+      </div>
+      <div class="bh-insight-grid">
+        <div>
+          <h3 class="bh-h3">一、定位与内容边界：为什么做爆料而非围观</h3>
+          <p>51黑爆料入口从成立之初就把自己定位为<b>视频品牌官网</b>，而不是单纯的流量聚合页。我们相信，爆料的价值不在于情绪传播，而在于把可核实的事实以清晰、可追溯的方式呈现。因此平台对每一条进入首页推荐的内容设置了三道门槛：信源完整性、素材原始性、表述克制性。任何人都可以提交线索，但只有通过初步核对的内容才会进入编辑池，再由具备资质的创作者完成拍摄与二次校验。</p>
+          <p>在内容边界上，平台明确不鼓励未经核实的指控、不鼓励涉及个人隐私的曝光、不鼓励诱导性剪辑。编辑部会为每一条视频标注信源层级，从「单一信源」到「三方互证」共四级，用户可以在播放页直接看到。这种透明的做法让<b>官方网站</b>的公信力得以长期积累，也让创作者在制作过程中有章可循。</p>
+          <h3 class="bh-h3">二、创作者机制：从投稿到签约的完整成长路径</h3>
+          <p>平台把创作者成长拆成四个阶段：线索贡献者、初级创作者、签约创作者、专题主理人。每个阶段都有明确的能力要求与权益说明。初级创作者可以参加每月一次的拍摄与核对培训，通过考核后获得设备支持与流量倾斜；签约创作者则需承诺内容规范，并接受编辑部的随机抽检。目前平台<b>持续运营</b>的签约创作者有三百余位，覆盖城市观察、行业测评、人物访谈、户外记录等多个垂直领域。</p>
+          <p>为了让新人有清晰的成长预期，我们公开了完整的评审标准：素材是否原创、说明是否完整、核对是否可追溯、评论区维护是否及时。这四项各占一定权重，评审结果会在创作者后台展示，并附具体改进建议。许多用户反馈，这套机制让他们第一次感受到<b>专业</b>与<b>品质</b>并不是空话，而是可以被量化和改进的东西。</p>
+        </div>
+        <div>
+          <h3 class="bh-h3">三、技术底座：高清播放、素材留痕与社区治理</h3>
+          <p>在技术层面，平台为所有原创内容提供最高 4K 的<b>高清</b>转码与自适应码率播放，并为每条视频保留原始上传文件的校验值。这意味着一旦出现争议，编辑部可以回溯到最初版本，判断是否存在后期篡改。同时，评论区采用分层展示策略：事实补充、经验分享、情绪表达分别归入不同层级，用户可以按需查看。</p>
+          <p>社区治理方面，平台设置了举报与反馈双通道，所有举报会在 48 小时内响应。对于争议较大的内容，编辑部会发布独立的核对说明，并邀请多方创作者参与讨论。我们相信<b>包容</b>不等于放任，<b>真实</b>也不等于未经整理的碎片。正是这种对细节的坚持，让 51黑爆料入口逐渐成为不少用户心中<b>值得信赖</b>的内容平台。</p>
+          <h3 class="bh-h3">四、社区价值：陪伴、成长与长期主义</h3>
+          <p>过去三年，平台记录了超过一万两千条原创影像，其中大量内容来自普通用户的日常观察。有人拍下小区门口的修路进度，有人记录菜价变化，也有人用一年时间跟拍一家小店的开关门。这些内容单条播放量未必惊人，但汇聚起来就形成了具有社会价值的城市档案。平台为此专门设立了长期存档计划，对具有公共记录价值的作品进行归档与索引。</p>
+          <p>我们也在持续探索<b>创新</b>的表达方式，例如把用户投票结果做成可视化的季度报告、邀请创作者共同制定选题清单、开放部分核对流程供学习。这些尝试未必都成功，但平台愿意把过程公开，与社区一起<b>成长</b>。对 51黑爆料入口而言，官网不只是一个入口，更是一份长期承诺：让真实的记录被认真对待。</p>
+        </div>
+        <div class="bh-insight-quote">编辑部说明：平台所有公开内容均遵循原创正版与信源可追溯原则。若你对某条内容有补充或异议，可通过页面内的反馈入口提交，我们会在一周内给出处理结果并更新说明。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="bh-section" id="bh-reviews">
+    <div class="bh-container">
+      <div class="bh-sec-head">
+        <div class="bh-kicker">Reviews / 用户口碑</div>
+        <h2 class="bh-h2">社区评价：<mark>51黑爆料入口</mark>的用户反馈摘要</h2>
+        <p class="bh-sec-desc">以下评价来自真实用户反馈渠道，涵盖内容质量、使用体验与社区氛围等不同维度。</p>
+      </div>
+      <div class="bh-review-grid">
+        <article class="bh-review">
+          <div class="bh-review-top">
+            <div class="bh-review-avatar" style="background:linear-gradient(140deg,#ff8b5e,#ff3b30)">陆</div>
+            <div><div class="bh-review-name">陆屿</div><div class="bh-review-date">2026-11-18</div></div>
+            <div class="bh-stars">★★★★★</div>
+          </div>
+          <p>最打动我的是每条视频下面的信源说明，写得很细，连拍摄时间地点和核对过程都有。看多了会觉得这个平台是真的在认真做事。</p>
+        </article>
+        <article class="bh-review">
+          <div class="bh-review-top">
+            <div class="bh-review-avatar" style="background:linear-gradient(140deg,#c9ff3d,#6d9410)">周</div>
+            <div><div class="bh-review-name">周末修图</div><div class="bh-review-date">2026-11-15</div></div>
+            <div class="bh-stars">★★★★☆</div>
+          </div>
+          <p>教程系列对新手很友好，镜头手册那套清单我照着做，第一次拍出来的素材终于能用了。扣一星是因为有些专题更新节奏偏慢。</p>
+        </article>
+        <article class="bh-review">
+          <div class="bh-review-top">
+            <div class="bh-review-avatar" style="background:linear-gradient(140deg,#7db4ff,#3a5bd9)">陈</div>
+            <div><div class="bh-review-name">陈叙</div><div class="bh-review-date">2026-11-12</div></div>
+            <div class="bh-stars">★★★★★</div>
+          </div>
+          <p>评论区氛围比想象中好很多，补充信息的楼层会被顶上来，吵架的会被折叠。作为长期看客，这点体验很关键。</p>
+        </article>
+        <article class="bh-review">
+          <div class="bh-review-top">
+            <div class="bh-review-avatar" style="background:linear-gradient(140deg,#ffd166,#e08b00)">许</div>
+            <div><div class="bh-review-name">许半城</div><div class="bh-review-date">2026-11-09</div></div>
+            <div class="bh-stars">★★★★☆</div>
+          </div>
+          <p>投稿流程清楚，提交后能看到处理进度，这点比较少见。希望以后能开放更多选题方向的征集。</p>
+        </article>
+        <article class="bh-review bh-review-long">
+          <div class="bh-review-top">
+            <div class="bh-review-avatar" style="background:linear-gradient(140deg,#e79cff,#8c3fd9)">何</div>
+            <div><div class="bh-review-name">何工</div><div class="bh-review-date">2026-11-06</div></div>
+            <div class="bh-stars">★★★★★</div>
+          </div>
+          <p>作为内容行业从业者，我比较关注平台的内容治理方式。51黑爆料入口把核对标准、评审权重、举报响应时间都公开出来，这在同类平台里并不常见。我特意对照了几条争议内容，发现编辑部的说明确实会随新证据更新，而不是发完就结束。这种持续维护的成本很高，但也是口碑的来源。另外播放器的素材留痕提示做得很克制，不打扰观看，需要时又能找到。整体而言，这是一个把「可信」当产品来做的地方，值得同行参考。</p>
+        </article>
+        <article class="bh-review">
+          <div class="bh-review-top">
+            <div class="bh-review-avatar" style="background:linear-gradient(140deg,#5eead4,#0f8f7e)">阿</div>
+            <div><div class="bh-review-name">阿岚</div><div class="bh-review-date">2026-11-03</div></div>
+            <div class="bh-stars">★★★★☆</div>
+          </div>
+          <p>夜间模式很舒服，长文和视频列表切换顺畅。如果能把收藏夹分组管理做得更细一些就更好了。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHART -->
+  <section class="bh-section" id="bh-chart">
+    <div class="bh-container">
+      <div class="bh-sec-head">
+        <div class="bh-kicker">Ranking / 数据榜单</div>
+        <h2 class="bh-h2">热度榜：<mark>51黑爆料入口</mark>本周播放与互动综合排名</h2>
+        <p class="bh-sec-desc">榜单综合播放完成率、收藏率、有效评论数与信源完整度计算，每周一更新。</p>
+      </div>
+      <ol class="bh-chart">
+        <li class="bh-chart-row">
+          <span class="bh-chart-rank">01</span>
+          <div class="bh-chart-title">一条街的 72 小时：夜巡影像核对全记录<small>雾港记录 · 城市观察 · 信源完整度 A</small></div>
+          <span class="bh-chart-stats">18.7 万播放</span>
+        </li>
+        <li class="bh-chart-row">
+          <span class="bh-chart-rank">02</span>
+          <div class="bh-chart-title">凌晨四点的批发市场：价格波动背后的三份对账单<small>阿禾食记 · 行业观察 · 收藏率 8.4%</small></div>
+          <span class="bh-chart-stats">12.4 万播放</span>
+        </li>
+        <li class="bh-chart-row">
+          <span class="bh-chart-rank">03</span>
+          <div class="bh-chart-title">核对现场 01｜三份对账单如何互证<small>雾港记录 · 深度测评 · 完播率 64%</small></div>
+          <span class="bh-chart-stats">9.2 万播放</span>
+        </li>
+        <li class="bh-chart-row">
+          <span class="bh-chart-rank">04</span>
+          <div class="bh-chart-title">新手也能上手的爆料拍摄清单<small>镜头手册 · 教程干货 · 收藏率 11.2%</small></div>
+          <span class="bh-chart-stats">7.1 万播放</span>
+        </li>
+        <li class="bh-chart-row">
+          <span class="bh-chart-rank">05</span>
+          <div class="bh-chart-title">郊野水源地夜巡记录：一次 4 小时徒步<small>林间观察员 · 户外活动 · 有效评论 326</small></div>
+          <span class="bh-chart-stats">6.8 万播放</span>
+        </li>
+        <li class="bh-chart-row">
+          <span class="bh-chart-rank">06</span>
+          <div class="bh-chart-title">夜市摊主的十年账本：一张表看懂成本变化<small>阿禾食记 · 行业观察 · 完播率 58%</small></div>
+          <span class="bh-chart-stats">6.3 万播放</span>
+        </li>
+        <li class="bh-chart-row">
+          <span class="bh-chart-rank">07</span>
+          <div class="bh-chart-title">争议如何被讨论：评论区里的三种立场<small>纸上电台 · 文化访谈 · 有效评论 412</small></div>
+          <span class="bh-chart-stats">5.4 万播放</span>
+        </li>
+        <li class="bh-chart-row">
+          <span class="bh-chart-rank">08</span>
+          <div class="bh-chart-title">一次跨城跟拍：从线索到成片的 240 小时<small>长焦日记 · 创作幕后 · 收藏率 9.1%</small></div>
+          <span class="bh-chart-stats">4.2 万播放</span>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- DYNAMIC + FAQ -->
+  <section class="bh-section" id="bh-dynamic">
+    <div class="bh-container">
+      <div class="bh-sec-head">
+        <div class="bh-kicker">News &amp; Help / 企业动态与帮助</div>
+        <h2 class="bh-h2">企业动态与常见问题：<mark>51黑爆料入口</mark>官方公告</h2>
+        <p class="bh-sec-desc">平台更新、合作与规则调整均在此发布，同时提供常见问题解答。</p>
+      </div>
+      <div class="bh-duo">
+        <div>
+          <h3 class="bh-h3" style="margin-bottom:16px">最新企业动态</h3>
+          <div class="bh-news-list">
+            <article class="bh-news">
+              <time datetime="2026-11-21">11-21</time>
+              <div>
+                <h3>「城市夜巡计划」第三季第 12 期上线</h3>
+                <p>本期聚焦凌晨菜市场，新增信源对照面板，用户可在播放页查看每条信息的来源编号。</p>
+              </div>
+            </article>
+            <article class="bh-news">
+              <time datetime="2026-11-18">11-18</time>
+              <div>
+                <h3>创作者激励计划第 7 期开放报名</h3>
+                <p>本期面向户外记录、行业观察两个方向，报名截止 12 月 5 日，入选者可获得设备支持与专题推荐位。</p>
+              </div>
+            </article>
+            <article class="bh-news">
+              <time datetime="2026-11-14">11-14</time>
+              <div>
+                <h3>2026 年度爆料观察报告发布</h3>
+                <p>报告汇总平台年度内容数据、信源结构与社区治理实践，提供 PDF 摘要下载，供研究与学习使用。</p>
+              </div>
+            </article>
+            <article class="bh-news">
+              <time datetime="2026-11-10">11-10</time>
+              <div>
+                <h3>「真相核对」栏目流程升级</h3>
+                <p>新增多方信源交叉验证环节，核对说明需附完整比对记录，编辑部将随机抽检并公开结果。</p>
+              </div>
+            </article>
+          </div>
+          <h3 class="bh-h3" style="margin:26px 0 14px">合作伙伴</h3>
+          <div class="bh-partners">
+            <span class="bh-partner">城市影像档案馆</span>
+            <span class="bh-partner">公共记录实验室</span>
+            <span class="bh-partner">开源剪辑工具组</span>
+            <span class="bh-partner">青年创作者联盟</span>
+            <span class="bh-partner">社区观察计划</span>
+          </div>
+        </div>
+        <div class="bh-faq">
+          <h3 class="bh-h3" style="margin-bottom:16px">常见问题</h3>
+          <details open>
+            <summary>如何向 51黑爆料入口 提交线索？</summary>
+            <p>可通过页面内的「我要投稿」入口提交，填写线索概况、可提供的原始素材情况与联系方式。编辑部会在 48 小时内完成初步判断，并告知是否需要补充材料。</p>
+          </details>
+          <details>
+            <summary>平台对爆料内容的核对标准是什么？</summary>
+            <p>采用四级信源标注体系，从单一信源到三方互证。进入首页推荐的内容原则上需达到两方以上独立信源，并保留原始素材时间码与完整上传记录。</p>
+          </details>
+          <details>
+            <summary>投稿后会获得什么权益？</summary>
+            <p>通过初审的线索会进入编辑池，创作者与线索提供者均可在说明中署名。优质内容将获得流量支持、专题推荐以及创作者激励计划的报名资格。</p>
+          </details>
+          <details>
+            <summary>如何成为签约创作者？</summary>
+            <p>先在平台发布三条以上原创内容并通过内容规范培训，再提交签约申请。评审将从素材原创性、说明完整度、核对可追溯性与评论区维护四个维度进行评估。</p>
+          </details>
+          <details>
+            <summary>如果发现内容有误，如何反馈？</summary>
+            <p>可在播放页使用「反馈」按钮提交具体问题与佐证材料。编辑部会在一周内给出处理结果，并在原内容页面更新说明，保留完整处理记录。</p>
+          </details>
+          <details>
+            <summary>平台的原创正版如何保障？</summary>
+            <p>所有上架内容需通过原创声明与素材校验，转码时保留文件校验值。若发现搬运或侵权，平台将下架内容并依据规范处理相关账号。</p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="bh-footer">
+  <div class="bh-container">
+    <div class="bh-footer-grid">
+      <div>
+        <div class="bh-footer-brand">51黑<em>爆料</em>入口</div>
+        <p>51黑爆料入口官方网站，聚焦热点爆料与真实记录的视频平台。我们坚持原创正版、高清品质与信源可追溯，持续运营企业级内容生态，与创作者和用户共同成长。</p>
+      </div>
+      <div>
+        <h4>内容导航</h4>
+        <ul>
+          <li><a href="#bh-focus">焦点爆料</a></li>
+          <li><a href="#bh-videos">视频内容</a></li>
+          <li><a href="#bh-topics">专题企划</a></li>
+          <li><a href="#bh-creators">创作者矩阵</a></li>
+          <li><a href="#bh-chart">热度榜单</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>平台信息</h4>
+        <ul>
+          <li><a href="#bh-insight">平台深度解析</a></li>
+          <li><a href="#bh-dynamic">企业动态</a></li>
+          <li><a href="#bh-reviews">用户口碑</a></li>
+          <li><a href="#bh-dynamic">常见问题</a></li>
+          <li><a href="#bh-hero">关于我们</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>参与方式</h4>
+        <ul>
+          <li><button type="button" data-bh-submit style="color:inherit;font-size:12.8px">我要投稿</button></li>
+          <li><button type="button" data-bh-submit style="color:inherit;font-size:12.8px">线索提交</button></li>
+          <li><button type="button" data-bh-report style="color:inherit;font-size:12.8px">反馈与举报</button></li>
+          <li><button type="button" data-bh-copy style="color:inherit;font-size:12.8px">复制页面链接</button></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bh-footer-bottom">
+      <span>© 2026 51黑爆料入口 版权所有 · 官方网站 · 持续运营中</span>
+      <span>原创正版内容平台 · 信源可追溯 · 用户至上</span>
+    </div>
+  </div>
+</footer>
+
+<div class="bh-toast" id="bh-toast" role="status" aria-live="polite"></div>
+
+<div class="bh-modal-mask" id="bh-modal-submit">
+  <div class="bh-modal" style="position:relative">
+    <h3>提交线索 / 投稿</h3>
+    <p class="bh-modal-sub">请填写基本信息，编辑部将在 48 小时内联系你。所有材料仅用于内容核对。</p>
+    <label for="bh-f-title">线索标题</label>
+    <input id="bh-f-title" type="text" placeholder="例：某路口夜间施工记录">
+    <label for="bh-f-contact">联系方式</label>
+    <input id="bh-f-contact" type="text" placeholder="邮箱或常用联系方式">
+    <label for="bh-f-desc">情况说明</label>
+    <textarea id="bh-f-desc" placeholder="时间、地点、可提供的原始素材类型"></textarea>
+    <div class="bh-modal-actions">
+      <button class="bh-btn bh-btn-ghost" type="button" data-bh-close>取消</button>
+      <button class="bh-btn bh-btn-primary" type="button" id="bh-submit-send">提交</button>
+    </div>
+  </div>
+</div>
+
+<div class="bh-modal-mask" id="bh-modal-author">
+  <div class="bh-modal" style="position:relative">
+    <h3 id="bh-author-name">作者档案</h3>
+    <p class="bh-modal-sub" id="bh-author-meta"></p>
+    <p style="font-size:13.5px;color:#b3bac4" id="bh-author-bio"></p>
+    <div class="bh-modal-actions">
+      <button class="bh-btn bh-btn-ghost" type="button" data-bh-close>关闭</button>
+      <button class="bh-btn bh-btn-primary" type="button" data-bh-close>关注创作者</button>
+    </div>
+  </div>
+</div>
+
+<div class="bh-modal-mask" id="bh-modal-report">
+  <div class="bh-modal" style="position:relative">
+    <h3>反馈与举报</h3>
+    <p class="bh-modal-sub">请描述问题，我们会在一周内处理并更新说明。</p>
+    <label for="bh-r-type">问题类型</label>
+    <select id="bh-r-type">
+      <option>内容事实存疑</option>
+      <option>素材版权问题</option>
+      <option>隐私与不当曝光</option>
+      <option>使用体验问题</option>
+    </select>
+    <label for="bh-r-text">详细说明</label>
+    <textarea id="bh-r-text" placeholder="请提供具体位置与佐证信息"></textarea>
+    <div class="bh-modal-actions">
+      <button class="bh-btn bh-btn-ghost" type="button" data-bh-close>取消</button>
+      <button class="bh-btn bh-btn-primary" type="button" id="bh-report-send">提交反馈</button>
+    </div>
+  </div>
+</div>
+
+<button class="bh-top" id="bh-top" type="button" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- toast ---------- */
+  var toastEl = document.getElementById("bh-toast");
+  var toastTimer = null;
+  function toast(msg){
+    toastEl.textContent = msg;
+    toastEl.classList.add("is-show");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toastEl.classList.remove("is-show"); }, 2200);
+  }
+
+  /* ---------- mobile nav ---------- */
+  var burger = document.getElementById("bh-burger");
+  var nav = document.getElementById("bh-nav");
+  burger.addEventListener("click", function(){
+    nav.classList.toggle("is-open");
+  });
+  nav.addEventListener("click", function(e){
+    if(e.target.tagName === "A"){ nav.classList.remove("is-open"); }
+  });
+
+  /* ---------- search ---------- */
+  var searchInput = document.getElementById("bh-search-input");
+  var searchBtn = document.getElementById("bh-search-btn");
+  var searchHint = document.getElementById("bh-search-hint");
+  var pool = ["城市夜巡计划","真相核对手册","雾港记录","林间观察员","阿禾食记","长焦日记","纸上电台","镜头手册","信源交叉验证","爆料拍摄清单","创作者激励计划","热度榜","社区共创企划"];
+
+  function renderHint(kw){
+    if(!kw){
+      searchHint.innerHTML = "试试搜索：<b>城市夜巡</b> · <b>镜头手册</b> · <b>创作者激励</b>";
+      searchHint.classList.add("is-open");
+      return;
+    }
+    var hits = pool.filter(function(p){ return p.indexOf(kw) > -1; });
+    if(hits.length === 0){
+      searchHint.innerHTML = "暂无完全匹配结果，可尝试提交线索让编辑部跟进。";
+    }else{
+      searchHint.innerHTML = "找到 " + hits.length + " 条相关内容：<b>" + hits.slice(0,4).join(" · ") + "</b>";
+    }
+    searchHint.classList.add("is-open");
+  }
+  searchInput.addEventListener("input", function(){ renderHint(searchInput.value.trim()); });
+  searchInput.addEventListener("focus", function(){ renderHint(searchInput.value.trim()); });
+  searchInput.addEventListener("keydown", function(e){
+    if(e.key === "Enter"){
+      var kw = searchInput.value.trim();
+      toast(kw ? "已按「" + kw + "」进行站内检索" : "请输入关键词后再搜索");
+      searchHint.classList.remove("is-open");
+    }
+  });
+  searchBtn.addEventListener("click", function(){
+    var kw = searchInput.value.trim();
+    toast(kw ? "已按「" + kw + "」进行站内检索" : "请输入关键词后再搜索");
+  });
+  document.addEventListener("click", function(e){
+    if(!e.target.closest(".bh-search")){ searchHint.classList.remove("is-open"); }
+  });
+
+  /* ---------- like / save ---------- */
+  document.addEventListener("click", function(e){
+    var likeBtn = e.target.closest("[data-bh-like]");
+    if(likeBtn){
+      var span = likeBtn.querySelector("span");
+      var num = parseInt((span.textContent || "0").replace(/[^\d]/g,""), 10) || 0;
+      if(likeBtn.classList.contains("is-liked")){
+        likeBtn.classList.remove("is-liked");
+        likeBtn.firstChild.textContent = "♡ ";
+        span.textContent = (num - 1).toLocaleString();
+      }else{
+        likeBtn.classList.add("is-liked");
+        likeBtn.firstChild.textContent = "♥ ";
+        span.textContent = (num + 1).toLocaleString();
+      }
+      return;
+    }
+    var saveBtn = e.target.closest("[data-bh-save]");
+    if(saveBtn){
+      saveBtn.classList.toggle("is-saved");
+      saveBtn.textContent = saveBtn.classList.contains("is-saved") ? "★ 已收藏" : "☆ 收藏";
+      toast(saveBtn.classList.contains("is-saved") ? "已加入收藏" : "已取消收藏");
+    }
+  });
+
+  /* ---------- copy link ---------- */
+  function copyText(text){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(text).then(function(){ toast("链接已复制到剪贴板"); }, function(){ toast("复制失败，请手动选择链接"); });
+    }else{
+      var ta = document.createElement("textarea");
+      ta.value = text;
+      ta.style.position = "fixed";
+      ta.style.opacity = "0";
+      document.body.appendChild(ta);
+      ta.select();
+      try{ document.execCommand("copy"); toast("链接已复制到剪贴板"); }
+      catch(err){ toast("复制失败，请手动选择链接"); }
+      document.body.removeChild(ta);
+    }
+  }
+  document.addEventListener("click", function(e){
+    var copyBtn = e.target.closest("[data-bh-copy]");
+    if(copyBtn){ copyText("51黑爆料入口 · 焦点内容分享页"); }
+  });
+
+  /* ---------- modals ---------- */
+  var maskSubmit = document.getElementById("bh-modal-submit");
+  var maskAuthor = document.getElementById("bh-modal-author");
+  var maskReport = document.getElementById("bh-modal-report");
+
+  function openMask(m){ m.classList.add("is-open"); }
+  function closeAll(){
+    maskSubmit.classList.remove("is-open");
+    maskAuthor.classList.remove("is-open");
+    maskReport.classList.remove("is-open");
+  }
+  document.querySelectorAll("[data-bh-close]").forEach(function(btn){
+    btn.addEventListener("click", closeAll);
+  });
+  [maskSubmit, maskAuthor, maskReport].forEach(function(m){
+    m.addEventListener("click", function(e){ if(e.target === m){ closeAll(); } });
+  });
+  document.addEventListener("keydown", function(e){ if(e.key === "Escape"){ closeAll(); } });
+
+  /* submit */
+  var submitOpen = document.getElementById("bh-submit-open");
+  if(submitOpen){ submitOpen.addEventListener("click", function(){ openMask(maskSubmit); }); }
+  document.querySelectorAll("[data-bh-submit]").forEach(function(btn){
+    btn.addEventListener("click", function(){ openMask(maskSubmit); });
+  });
+  document.getElementById("bh-submit-send").addEventListener("click", function(){
+    var t = document.getElementById("bh-f-title").value.trim();
+    if(!t){ toast("请先填写线索标题"); return; }
+    closeAll();
+    document.getElementById("bh-f-title").value = "";
+    document.getElementById("bh-f-contact").value = "";
+    document.getElementById("bh-f-desc").value = "";
+    toast("提交成功，编辑部将在 48 小时内联系你");
+  });
+
+  /* author */
+  document.querySelectorAll("[data-bh-author]").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var parts = btn.getAttribute("data-bh-author").split("|");
+      document.getElementById("bh-author-name").textContent = parts[0];
+      document.getElementById("bh-author-meta").textContent = parts[1] + " · 作品 " + parts[2] + " · 粉丝 " + parts[3];
+      document.getElementById("bh-author-bio").textContent = parts[4];
+      openMask(maskAuthor);
+    });
+  });
+
+  /* report */
+  document.querySelectorAll("[data-bh-report]").forEach(function(btn){
+    btn.addEventListener("click", function(){ openMask(maskReport); });
+  });
+  document.getElementById("bh-report-send").addEventListener("click", function(){
+    var txt = document.getElementById("bh-r-text").value.trim();
+    if(!txt){ toast("请填写详细说明后再提交"); return; }
+    closeAll();
+    document.getElementById("bh-r-text").value = "";
+    toast("反馈已提交，我们会在一周内处理");
+  });
+
+  /* ---------- back to top ---------- */
+  var topBtn = document.getElementById("bh-top");
+  window.addEventListener("scroll", function(){
+    if(window.scrollY > 520){ topBtn.classList.add("is-show"); }
+    else{ topBtn.classList.remove("is-show"); }
+  }, {passive:true});
+  topBtn.addEventListener("click", function(){
+    window.scrollTo({ top:0, behavior:"smooth" });
+  });
+
+  /* ---------- count up ---------- */
+  var counted = false;
+  function runCount(){
+    if(counted){ return; }
+    var stats = document.querySelectorAll("[data-bh-count]");
+    if(!stats.length){ return; }
+    var rect = stats[0].getBoundingClientRect();
+    if(rect.top < window.innerHeight - 60){
+      counted = true;
+      stats.forEach(function(el){
+        var target = parseInt(el.getAttribute("data-bh-count"), 10);
+        var small = el.querySelector("small") ? el.querySelector("small").outerHTML : "";
+        var start = null;
+        var dur = 1100;
+        function step(ts){
+          if(!start){ start = ts; }
+          var p = Math.min((ts - start) / dur, 1);
+          var v = Math.floor(target * (1 - Math.pow(1 - p, 3)));
+          el.innerHTML = v.toLocaleString() + small;
+          if(p < 1){ requestAnimationFrame(step); }
+        }
+        requestAnimationFrame(step);
+      });
+    }
+  }
+  window.addEventListener("scroll", runCount, {passive:true});
+  window.addEventListener("resize", runCount);
+  runCount();
+
+})();
+</script>
+</body>
+            </html>
